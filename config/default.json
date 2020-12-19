@@ -1,0 +1,5 @@
+{
+  "port": 5000,
+  "mongoURI": "mongodb+srv://admin:123456qwerty@cluster0.9bubp.mongodb.net/data?retryWrites=true&w=majority",
+  "jwtSecret": "Dota 2"
+}
