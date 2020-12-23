@@ -1,6 +1,6 @@
 /*@import "~materialize-css/dist/css/materialize.min.css";*/
 * {
-    /*overflow: hidden;*/
+    outline: none !important;
 }
 
 .toast {

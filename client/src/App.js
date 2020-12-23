@@ -16,9 +16,9 @@ const App = () => {
         <AuthContext.Provider value={{
             token, login, logout, userId, isAuthenticated
         }}>
-            <Grid container xs={12}>
+            <div className="outline-none focus:outline-none">
                 {routes}
-            </Grid>
+            </div>
         </AuthContext.Provider>
 
     );
