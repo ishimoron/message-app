@@ -12,7 +12,7 @@ import {
     Tab,
     Tabs
 } from '@material-ui/core'
-import {TabPanel, TabContext, Alert} from '@material-ui/lab';
+import {TabPanel, TabContext} from '@material-ui/lab';
 import 'materialize-css'
 
 import LockIcon from '@material-ui/icons/Lock';
@@ -86,7 +86,7 @@ export const AuthPage = () => {
             margin: theme.spacing(3, 0, 2)
         },
         root: {
-        flexGrow: 1
+            flexGrow: 1
         }
     }));
 

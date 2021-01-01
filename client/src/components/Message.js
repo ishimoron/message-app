@@ -1,30 +1,31 @@
-import React, {useContext} from "react";
+import React from "react";
 import {Link, useParams} from "react-router-dom";
 import messagesDB from "../messagesDB";
 
 import {MotionScene, SharedElement, MotionScreen} from "react-motion-layout";
 
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import {AuthContext} from "../context/AuthContext";
 import {IconButton} from "@material-ui/core";
+
+
+import SendIcon from '@material-ui/icons/Send';
+
 
 export default function Messages() {
     const {messageId} = useParams();
     const item = messagesDB[messageId || 0];
-    const auth = useContext(AuthContext)
     return (
         <MotionScreen>
             <MotionScene
                 name={`message-${messageId}`}
                 easing="cubic-bezier(0.22, 1, 0.36, 1)"
             >
-                <div className="flex flex-col">
+                <div className="flex flex-col h-screen">
                     <div className="flex p-4 cursor-pointer hover:bg-gray-100 items-center">
                         <div className="mr-4">
                             <IconButton>
                                 <Link to="/messages"><ArrowBackIcon/></Link>
                             </IconButton>
-
                         </div>
                         <SharedElement.Image
                             alt=""
@@ -72,6 +73,12 @@ export default function Messages() {
                                 src={item.avatar}
                             />
                         </div>
+                    </div>
+                    <div className="ml-4 flex mt-auto mb-2">
+                        <input type="text" placeholder="Type your message"
+                               className="border-5 w-96% bg-gray-500 rounded-3xl p-3 bg-opacity-25"/>
+                        <span className="text-2xl mx-4 mt-2"><SendIcon className="cursor-pointer"
+                                                                       fontSize="large" color="primary"/></span>
                     </div>
                 </div>
             </MotionScene>

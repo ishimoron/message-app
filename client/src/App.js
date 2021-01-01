@@ -1,7 +1,6 @@
 import './App.css';
 
 import {useRoutes} from './routes'
-import {Grid} from "@material-ui/core";
 import {useAuth} from "./hooks/auth.hook";
 
 import 'materialize-css'
